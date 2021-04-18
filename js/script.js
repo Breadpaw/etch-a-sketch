@@ -25,7 +25,7 @@ function addPixels(squaresPerSide) {
   const pixels = Array.from(document.querySelectorAll(".pixel"));
 
   pixels.forEach((pixel) => {
-    pixel.addEventListener("mouseenter", lightPixel); // mouseEnter
+    pixel.addEventListener("mouseenter", lightPixel);
     pixel.addEventListener("mouseout", dimPixel);
   });
 
@@ -40,13 +40,13 @@ function addPixels(squaresPerSide) {
   }
 }
 
-function resetSketch(e) {
-  const squaresPerSide = prompt("How many squared do you want per side?");
-  removePixels();
-  addPixels(squaresPerSide);
-}
-
 function removePixels() {
   const pixels = Array.from(document.querySelectorAll(".pixel"));
   pixels.forEach((pixel) => pixel.parentNode.removeChild(pixel));
 }
+
+function resetSketch(e) {
+    const squaresPerSide = prompt("How many squared do you want per side?");
+    removePixels();
+    addPixels(squaresPerSide);
+  }
