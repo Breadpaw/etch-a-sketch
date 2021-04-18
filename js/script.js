@@ -1,12 +1,12 @@
-let numberOfRows = 16;
-let numberOfColumns = 16;
+let squaresPerSide = 16;
+let totalSquares = squaresPerSide * squaresPerSide;
 
 const containerDiv = document.querySelector(".container");
 
-containerDiv.style.gridTemplateRows = "repeat(" + numberOfRows + ", 1fr)";
-containerDiv.style.gridTemplateColumns = "repeat(" + numberOfColumns + ", 1fr)";
+containerDiv.style.gridTemplateRows = "repeat(" + squaresPerSide + ", 1fr)";
+containerDiv.style.gridTemplateColumns = "repeat(" + squaresPerSide + ", 1fr)";
 
-for (let i = 0; i < 16*16; i++) {
+for (let i = 0; i < (totalSquares) ; i++) {
   const pixelDiv = document.createElement("div");
   pixelDiv.classList.add("pixel");
   pixelDiv.classList.add("inactive");
@@ -32,4 +32,10 @@ function dimPixel(e) {
     e.target.classList.add('inactive');
 }
 
-const resetButton = document.que
+// const resetButton = document.querySelector('.reset-button');
+
+// resetButton.addEventListener('click', resetSketch);
+
+// function resetSketch(e) {
+//     squaresPerSide = prompt("How many squared do you want per side?")
+// }
