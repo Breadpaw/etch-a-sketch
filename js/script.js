@@ -26,19 +26,14 @@ function addPixels(squaresPerSide) {
 
   pixels.forEach((pixel) => {
     pixel.addEventListener("mouseenter", lightPixel);
-    pixel.addEventListener("mouseout", dimPixel);
   });
 
-  function lightPixel(e) {
+}
+
+function lightPixel(e) {
     e.target.classList.remove("inactive");
     e.target.classList.add("active");
   }
-
-  function dimPixel(e) {
-    // e.target.classList.remove("active");
-    // e.target.classList.add("inactive");
-  }
-}
 
 function removePixels() {
   const pixels = Array.from(document.querySelectorAll(".pixel"));
