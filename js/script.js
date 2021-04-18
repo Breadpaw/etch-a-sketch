@@ -11,8 +11,7 @@ function addPixels(squaresPerSide) {
   const containerDiv = document.querySelector(".container");
 
   containerDiv.style.gridTemplateRows = "repeat(" + squaresPerSide + ", 1fr)";
-  containerDiv.style.gridTemplateColumns =
-    "repeat(" + squaresPerSide + ", 1fr)";
+  containerDiv.style.gridTemplateColumns = "repeat(" + squaresPerSide + ", 1fr)";
 
   for (let i = 0; i < totalSquares; i++) {
     const pixelDiv = document.createElement("div");
@@ -78,14 +77,12 @@ function lightPixelGrayscale(e) {
 
   if (
     (e.target.style.backgroundColor.substring(0, 4) === "rgb(" &&
-      e.target.style.backgroundColor.replaceAll(" ","") !== "rgb(0,0,0)") ||
+      e.target.style.backgroundColor.replaceAll(" ", "") !== "rgb(0,0,0)") ||
     e.target.style.backgroundColor === ""
   ) {
     e.target.style.backgroundColor = "rgba(0,0,0,0.1)";
   } else {
-    const opacity = parseFloat(
-      e.target.style.backgroundColor.substring(14, 17)
-    );
+    const opacity = parseFloat(e.target.style.backgroundColor.substring(14, 17));
 
     if (opacity !== 1) {
       const newBackgroundColor = "rgba(0,0,0," + (opacity + 0.1) + ")";
