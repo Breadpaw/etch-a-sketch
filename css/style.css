@@ -5,6 +5,8 @@ body {
   justify-content: center;
 
   background-color: black;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container-edge {
@@ -40,7 +42,7 @@ body {
     width:200px;
     height:50px;
 
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: 20px;
 
     border-style: none;
@@ -51,9 +53,26 @@ body {
 
     box-shadow: 2px 2px 5px black;
     
-    display: block;
+    display: inline-block;
 }
 
 .reset-button:active {
     box-shadow: none;
+}
+
+.radio-group {
+    margin-left: 25px;
+    display: inline-block;
+}
+
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    border-color: green;
+}
+
+label {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 20px;
 }
