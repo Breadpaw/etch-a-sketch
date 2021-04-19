@@ -98,7 +98,14 @@ function removePixels() {
 }
 
 function resetSketch(e) {
-  const squaresPerSide = prompt("How many squared do you want per side?");
-  removePixels();
-  addPixels(squaresPerSide);
+  const squaresPerSide = prompt("How many squares do you want per side?");
+
+  if (squaresPerSide > 64) {
+    removePixels();
+    addPixels(64);
+    alert("The maximum squares per side is 64");
+  } else {
+    removePixels();
+    addPixels(squaresPerSide);
+  }
 }
